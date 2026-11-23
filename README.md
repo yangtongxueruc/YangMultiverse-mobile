@@ -1,16 +1,21 @@
-# YangMultiverse — 多元宇宙微缩生态互动小游戏
+# YangMultiverse
 
-包含四个独立 3D 微缩生态世界：**春日草原**、**沙漠绿洲**、**森林秘境**、**极地冰原**，已完整适配桌面端与移动端触控（双指捏合缩放、双指旋转视角、竖屏自适应视野与底部安全区操作栏），纯静态单文件实现，解压即可直接部署到 GitHub Pages。
+交互式 Three.js 3D 黏土/毛毡绘本风多元宇宙微缩生态沙盘，包含 5 个独立宇宙：
 
-## 快速发布到 GitHub Pages
+- `meadow` — 🌿 春日草原（小羊与金渐层猫）
+- `desert` — 🏜 沙漠绿洲（迷你羊驼与耳廓狐）
+- `forest` — 🌲 森林秘境（红松鼠与小熊猫）
+- `arctic` — ❄ 极地冰原（企鹅与北极熊）
+- `coral` — 🐚 珊瑚浅海（寄居蟹与海獭，含橘子海日落、热带太阳雨与蓝眼泪水母夜）
 
-1. 新建一个 GitHub 仓库（例如 `yangmultiverse`），或打开你现有的静态站点仓库。
-2. 将压缩包内的 `index.html` 和 `.nojekyll` 直接上传（或 `git push`）到仓库根目录。
-3. 在仓库页面进入 **Settings → Pages**，在 **Build and deployment** 中选择 **Deploy from a branch**，分支选 `main`、目录选 `/ (root)`，点击 **Save**。
-4. 等待约 1 分钟即可通过 `https://<你的用户名>.github.io/<仓库名>/` 访问。
+## GitHub Pages 部署步骤
 
-## 支持的 URL 参数（方便网站内嵌）
+1. 将压缩包解压后的全部文件（`index.html`、`.nojekyll`、`README.md`）上传到 GitHub 仓库根目录并推送至 `main` 分支。
+2. 进入仓库 **Settings → Pages**，在 **Build and deployment** 中将 **Source** 设为 **Deploy from a branch**，分支选择 `main`、目录选择 `/ (root)` 并保存。
+3. 等待约 1 分钟即可通过 `https://<你的用户名>.github.io/<仓库名>/` 访问。
 
-- `?world=meadow` / `desert` / `forest` / `arctic`：指定默认进入的世界
-- `?pure=1`：纯净嵌入模式（隐藏顶部世界切换与控制栏）
-- `?zoom=1.2`：设置初始画面缩放倍率（范围 `0.85`–`2.20`）
+## 支持的 URL 参数
+
+- `?world=meadow|desert|forest|arctic|coral`：指定默认进入的宇宙
+- `?pure=1`：纯净嵌入模式（隐藏外围 UI，适合个人网站 `<iframe>` 嵌入）
+- `?zoom=0.85..2.2`：自定义初始镜头缩放倍率
